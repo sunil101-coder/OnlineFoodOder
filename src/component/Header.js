@@ -121,7 +121,7 @@ nav ul li{
     align-content:center;
     text-align:center;
     ${customMedia.greaterThan('lgdesktop')`
-margin:14rem 0 0 0rem;
+margin:9rem 0 0 0rem;
 width:60%;
 
 `}
