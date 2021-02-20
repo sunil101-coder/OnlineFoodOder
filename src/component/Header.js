@@ -120,7 +120,7 @@ nav ul li{
     justify-content:center;
     align-content:center;
     text-align:center;
-    ${customMedia.lessThan('lgdesktop')`
+    ${customMedia.greaterThan('lgdesktop')`
 margin:14rem 0 0 0rem;
 width:60%;
 

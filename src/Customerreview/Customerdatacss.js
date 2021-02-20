@@ -49,7 +49,7 @@ margin:0 auto;
   font-size:1rem;
   margin:3rem 0 0 1rem; 
   color:blue;
-font-family:math;
+font-family:math; 
 vertical-align:basline;
 `;
   export const CustomerDesc=styled.h1`
