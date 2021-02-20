@@ -27,7 +27,7 @@ const Header = () => {
                 <nav>
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href="">Order Now</a></li>
 
@@ -120,16 +120,7 @@ nav ul li{
     justify-content:center;
     align-content:center;
     text-align:center;
-    ${customMedia.greaterThan('lgdesktop')`
-margin:9rem 0 0 0rem;
-width:60%;
-
-`}
-    ${customMedia.lessThan('mdDesktop')`
-    margin:14rem 0 0 1rem;
-    width:60%;
     
-`}
 }
 .header-box{
     height:10rem;
