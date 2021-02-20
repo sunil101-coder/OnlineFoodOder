@@ -16,8 +16,8 @@
 body{
     font-family: 'Helvetica';
     -webkit-font-smoothing:antialiased;
-    background: var(--main-white);
-    color: #fff;
+    background: #fff;
+   ;
 }
 .App{
     background: var(--main-white);
