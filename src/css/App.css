@@ -15,12 +15,9 @@
 }
 body{
     font-family: 'Helvetica';
-    -webkit-font-smoothing:'antialiased';
-    background: #fff;
-   ;
-}
-.App{
+    -webkit-font-smoothing:antialiased;
     background: var(--main-white);
+    color: #fff;
 }
 a{
     text-decoration: none;

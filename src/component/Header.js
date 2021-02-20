@@ -115,7 +115,7 @@ nav ul li{
 
     width:60%;
     position:relative;
-    margin:5.5rem 0 0;
+    margin:0.5rem 0 0;
     display:flex;
     justify-content:center;
     align-content:center;
