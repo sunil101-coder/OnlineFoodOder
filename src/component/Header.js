@@ -102,20 +102,25 @@ nav ul li{
     padding:10px 0 0 3rem;
     float:left;
     font-size:1.5rem;
+    
 }
 .header-top nav ul li a{
     font-size:1em;
     font-weight:100;
+    width:4rem;
     &:hover{
         color:lightblue;
-        }
+        border-top:1px solid black;
+        border-left:1px solid black;
+        border-right:1px solid black;    
+    }
 }
 
 .header-content{
 
     width:60%;
     position:relative;
-    margin:0.5rem 0 0;
+    margin:4.5rem 0 0;
     display:flex;
     justify-content:center;
     align-content:center;

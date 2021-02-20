@@ -9,8 +9,12 @@ const customMedia = generateMedia({
   });
   export const Customercontainer =styled.div`
   width:100%;
-  height:50vh;
-
+ 
+span{
+  vertical-align:baseline;
+  color:yellow;
+  margin-left:8rem;
+}
   `;
   export const CustomerHeading=styled.div`
   justify-content:center;
@@ -34,7 +38,7 @@ margin:0 auto;
   margin:2rem 1rem 2rem 1rem;
   line-height:2;
   width:500px;
-  height:200px;
+  height:280px;
   border:1px solid lightblue;
   border-radius:20px 20px 16px 16px;
     `;
@@ -51,6 +55,7 @@ margin:0 auto;
   color:blue;
 font-family:math; 
 vertical-align:basline;
+
 `;
   export const CustomerDesc=styled.h1`
   text-align:left;

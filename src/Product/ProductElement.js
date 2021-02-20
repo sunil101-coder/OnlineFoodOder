@@ -80,7 +80,7 @@ align-items:center;
 text-align:center; 
 Color:#000;
 opacity: 1;
-margin-top:${props=>(props.producttitle?'-3rem':null)} ;
+margin-top:${props=>(props.producttitle?'-4rem':null)} ;
 color:${props=>(props.producttitle?'#fff':'#000')};
 font-size:${props=>(props.producttitle?'2rem':'1.5rem')} ;
 }
