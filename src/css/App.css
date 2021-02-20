@@ -19,6 +19,9 @@ body{
     background: var(--main-white);
     color: #fff;
 }
+.App{
+    background:white;
+}
 a{
     text-decoration: none;
 }
