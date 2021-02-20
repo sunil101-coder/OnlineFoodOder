@@ -15,7 +15,7 @@
 }
 body{
     font-family: 'Helvetica';
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:'antialiased';
     background: #fff;
    ;
 }
