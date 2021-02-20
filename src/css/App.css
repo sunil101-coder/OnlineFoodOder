@@ -19,7 +19,7 @@ body{
     background: var(--main-white);
     color: #fff;
 }
-.app{
+.App{
     background: var(--main-white);
 }
 a{
