@@ -1,0 +1,33 @@
+     <div className={nav?'header-top active':'header-top'}>
+                <Sitelogo src={Logo}/>                                 
+                <nav>
+                <ul>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="">Contact</NavLink></li>
+                    <li><NavLink to="">Order Now</NavLink></li>
+
+                    </ul>
+             
+                </nav>
+                <Sidenavbar/>
+            </div>
+            <div className="header-content">
+                <div className="header-box">
+                <Title>
+                    Always Choose Good
+                </Title>
+                <Subtitle>
+                    Order  anywhere anytime.
+
+                     </Subtitle>
+                     <Button className="titlebtn">
+                        Our menu
+                        </Button>                     
+
+              
+                </div>
+            </div>
+
+     //headercontent/
+     

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { generateMedia } from "styled-media-query" 
 import Logo from '../images/Logo.jpg'
 import Button from '../component/Button'
+import {NavLink } from 'react-router-dom'
+import Sidenavbar from '../component/Sidenavbar'
 const Header = () => {
     const [nav ,setnav]=useState(false);
     const fixednavbar=()=>{
@@ -22,20 +24,11 @@ const Header = () => {
     
     return (
         <Headercontainer className="header-container">
-            <div className={nav?'header-top active':'header-top'}>
-                <Sitelogo src={Logo}/>                                 
-                <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Order Now</a></li>
-
-                    </ul>
-             
-                </nav>
-            </div>
-            <div className="header-content">
+                 <div className={nav?'header-top active':'header-top'}>
+                <Sitelogo src={Logo}/>
+                <Sidenavbar/> 
+                </div> 
+                <div className="header-content">
                 <div className="header-box">
                 <Title>
                     Always Choose Good
@@ -50,9 +43,11 @@ const Header = () => {
 
               
                 </div>
-            </div>
-
-        </Headercontainer>
+            </div>                       
+            
+                   
+                
+          </Headercontainer>
         
     )
 }
@@ -69,11 +64,15 @@ const Sitelogo =styled.img`
 width:150px;
 ${customMedia.lessThan('smMobile')`
         width:100px;
-        margin:-8rem 0 0 -5rem;
+        margin:0 0 0 -5rem;
         top:0;
+        position:absolute;
 `}`
 const Headercontainer =styled.div`
 
+    ${customMedia.lessThan('smMobile')`
+    height:100vw;
+    `}
 .header-top{
     
         z-index:1;
@@ -110,29 +109,36 @@ nav ul li{
     width:4rem;
     &:hover{
         color:lightblue;
-        border-top:1px solid black;
-        border-left:1px solid black;
-        border-right:1px solid black;    
+        
     }
+    ${customMedia.lessThan('smMobile')`
+    display:block;
+`}
+
 }
 
 .header-content{
 
-    width:60%;
+    width:100%;
     position:relative;
     margin:4.5rem 0 0;
     display:flex;
     justify-content:center;
     align-content:center;
     text-align:center;
+    ${customMedia.lessThan('smMobile')`
+    position:absolute;
+    margin:7rem 0 0 0;
+    ;
+`}
     
 }
 .header-box{
     height:10rem;
     text-align:left;
-    justify-content:left;
-    aloign-content:left;
-    margin:1rem 0 0 0;
+    justify-content:center;
+    aloign-content:center;
+    margin:10rem 0 0 0;
 }
 .titlebtn
 {

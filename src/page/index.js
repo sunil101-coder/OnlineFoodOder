@@ -13,7 +13,7 @@ const index = () => {
             <Item data1={RemovedEl}/>
             <Product  data={Item1}/> 
             <Item2 data1={RemovedEl}/>  
-            <CustomerReview Customerdata={Customerdata}/>    
+   <CustomerReview Customerdata={Customerdata}/>   
         </div>
     )
 }

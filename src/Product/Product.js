@@ -13,7 +13,7 @@ import {
 const Product = ({ data }) => {
     return (
         <ProdouctsContainer >
-            <ProdouctsHeading productheading>
+            <ProdouctsHeading>
                 Collection
                 <br/>
                 <Prodouctstext>
@@ -23,8 +23,8 @@ const Product = ({ data }) => {
             <ProductWrapper>
                 {
                     data.map((data, index) => {
-                        return (
-                            <Productcard class="card" key={index }productcard>
+                        return ( 
+                            <Productcard class="card" key={index } productcard>
                                 <Productimg src={data.image} class="card-img-top" alt="..." secondary />
                                 <ProductTitle class="card-title" producttitle>{data.Title}</ProductTitle>
                             </Productcard>)

@@ -39,7 +39,7 @@ background: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),
 opacity:.85;
 `;
 const Item2wrapper=styled.div`
-margin:0 0 0 0;`;
+margin:2rem 0 0 0;`;
 const Item2heading=styled.h1`
 text-align:center;
 justify-content:center;

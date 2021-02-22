@@ -14,6 +14,11 @@ span{
   vertical-align:baseline;
   color:yellow;
   margin-left:8rem;
+  ${customMedia.lessThan('smMobile')`
+margin-left:6rem; 
+ 
+`} 
+
 }
   `;
   export const CustomerHeading=styled.div`
@@ -41,6 +46,13 @@ margin:0 auto;
   height:280px;
   border:1px solid lightblue;
   border-radius:20px 20px 16px 16px;
+  ${customMedia.lessThan('smMobile')`
+  width:350px;
+  height:300px;
+  line-height:1.5;
+ 
+`}
+
     `;
   export const Customerimg=styled.img`
   border-radius:75%;
@@ -55,10 +67,18 @@ margin:0 auto;
   color:blue;
 font-family:math; 
 vertical-align:basline;
-
+${customMedia.lessThan('smMobile')`
+margin:2rem 0 0 1rem; 
+ 
+`} 
 `;
   export const CustomerDesc=styled.h1`
   text-align:left;
   font-size:1rem;
   color:#000;
-  margin:2rem 0 0 1rem; `;
+  margin:2rem 0 0 1rem;
+  ${customMedia.lessThan('smMobile')`
+margin:1rem 0 0 1rem; 
+ 
+`} 
+ `;
