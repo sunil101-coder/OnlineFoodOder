@@ -6,12 +6,12 @@ const Icontab = () => {
     return (
         <Iconbar className="iconbar">
                 <div className="icon">
-                <AiOutlineShopping size={30}/>
+                <AiOutlineShopping size={25}/>
                 <br/>
                 Delivery
                 </div>
                 <div className="icon">
-                <RiFootprintFill size={30}/>
+                <RiFootprintFill size={25}/>
                 <br/>
                 Take Away
                 </div>
@@ -27,11 +27,11 @@ export default Icontab
 
 const Iconbar=styled.div`
 position: fixed;
-height: 6rem;
+height: 4rem;
 width: 100%;
 background: white;
 display:flex;
-flex-direction:columns;
+flex-direction:row;
 margin: -15rem 0 0 0;
 border-top:1px solid #e8e8e8;
 bottom:0;
@@ -40,7 +40,7 @@ color:black;
     justify-content:center;
     text-align:center;
     align-content:center;
-    margin:1rem 0 0 0;
+    margin:0.5rem 0 0 0;
     width:50%;
 
 }
