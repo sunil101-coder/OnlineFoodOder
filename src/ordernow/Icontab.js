@@ -34,6 +34,7 @@ display:flex;
 flex-direction:columns;
 margin: -15rem 0 0 0;
 border-top:1px solid #e8e8e8;
+bottom:0;
 color:black;
 .icon{
     justify-content:center;
