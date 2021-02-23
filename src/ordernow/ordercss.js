@@ -19,7 +19,25 @@ height:100%;
    
 } span{
     vertical-align:sub;
-}`
+
+}
+.showdata::before{
+    content:'See Less';
+}
+.showdata::before {
+    content:'See Less';
+
+}
+.showdata::after{
+    content:'';
+}
+.showhide::before{
+    content:'See More';
+}
+.showhide::after{
+    content:'';
+}
+`
 ;
 export const Topbar=styled.div`
 width:100%;
@@ -150,5 +168,4 @@ box-shadow:3px 6px 17px 19px #e8e8e8;
 font-size:1rem;
 border:none;
 outline:none;
-
 `;

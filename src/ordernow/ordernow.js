@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {BiLeftArrowAlt} from 'react-icons/bi/index'
 import {IoIosArrowDown} from 'react-icons/io/index'
+import {IoIosArrowUp} from 'react-icons/io/index'
+
 import Icontab from './Icontab'
 import {Ordercotainer,Topbar,Content,
     Searchbar,Foodlist,
@@ -61,10 +63,19 @@ const Ordernow = () => {
                             
                         )}
                     )}   
-     
+                  
+       
                     </Foodcard>
-   :null  }                           
-                    <Button onClick={showfilterdata} itembtn >See More<span><IoIosArrowDown/></span></Button>
+                    
+                    
+   :null 
+    }         
+
+                    <div>
+
+                    <Button onClick={showfilterdata} className={showfilter?"showdata":"showhide"} ><span><IoIosArrowDown/></span></Button>
+                    
+                        </div>                   
                     
                     </Foodlist>
             </Content>
