@@ -26,7 +26,18 @@ const Header = () => {
         <Headercontainer className="header-container">
                  <div className={nav?'header-top active':'header-top'}>
                 <Sitelogo src={Logo}/>
-                <Sidenavbar/> 
+                <Sidenavbar/>
+                 <nav>
+                    <ul>
+                    <li><NavLink to="/about">About Us</NavLink></li>
+                    <li><NavLink to="">Contact</NavLink></li>
+                    <li><NavLink to="/order-online">Order Now</NavLink></li>
+
+                    </ul>
+             
+                </nav>
+
+
                 </div> 
                 <div className="header-content">
                 <div className="header-box">
@@ -62,13 +73,17 @@ const customMedia = generateMedia({
   });
 const Sitelogo =styled.img`
 width:150px;
-${customMedia.lessThan('smMobile')`
+${customMedia.lessThan('tablet')`
         width:100px;
-        margin:0 0 0 -5rem;
-        top:0;
-        position:absolute;
+        margin:0 0 0 -2rem;
+`
+}
+${customMedia.lessThan('smMobile')`
+        display:none;
 `}`
 const Headercontainer =styled.div`
+${customMedia.lessThan('tablet')`
+height:100vw;`}
 
     ${customMedia.lessThan('smMobile')`
     height:100vw;
@@ -93,6 +108,11 @@ const Headercontainer =styled.div`
     font-size:2em;
     font-weight:700;
     text-decoration:none;
+    ${customMedia.lessThan('smMobile')`
+    font-size:1em;
+    
+    `}
+    
     
 }
 
@@ -112,7 +132,8 @@ nav ul li{
         
     }
     ${customMedia.lessThan('smMobile')`
-    display:block;
+    display:none;
+
 `}
 
 }

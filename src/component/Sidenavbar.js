@@ -22,9 +22,10 @@ const Sidenavbar = () => {
             shownav ?
             
             <nav className="nav">
-                <NavLink to="/">About</NavLink>
-                <NavLink to="/">Sign In</NavLink>
-                <NavLink to="/">Order Now</NavLink>
+                
+                <NavLink to="/">Login</NavLink>
+                <NavLink to="/">Signup</NavLink>
+                <NavLink to="/order-online">Order Now</NavLink>
                             
             </nav>
 
@@ -41,7 +42,7 @@ const customMedia = generateMedia({
     mdDesktop:'1150px',
     tablet: "960px",
     mobile: "740px",
-    smMobile: "600px"
+    smMobile: "440px"
   });
 
 const Navbar=styled.div`
@@ -50,37 +51,39 @@ display:none;
     `}
     ${customMedia.lessThan('smMobile')`
     display:block;
+    background-color: transparent;
         `}
     
-height: 100%;
-  width: 13.5rem;
+height: 22rem;
+  width: 22rem;
   z-index: 1;
   top: 0;
   left: 0;
   position:absolute;
-  background-color: transparent;
+  background-color: ;
   overflow-x: hidden;
   transition: 0.5s;
-  transform:translate(70%,2%);
-  padding-top: 60px;
-
+  transform:translate(1%,2%);
+ 
   .closebtn {
-    position: absolute;
+    position: relative;
     top: 0;
-    right: 25px;
+    right: 2rem;
     font-size: 36px;
     margin-left: 50px;
   }
   .nav{
-      margin:-4rem 0 0 -2rem; 
+      margin:2rem 0 0 1rem; 
   }
   .nav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1rem;
     color: #fff;
     display: block;
     transition: 0.3s;
+
+
   }
   
   .nav a:hover {

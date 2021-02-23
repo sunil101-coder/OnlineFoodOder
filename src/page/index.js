@@ -6,6 +6,7 @@ import CustomerReview from '../Customerreview/CustomerReview'
 import Product from '../Product/Product'
 import {RemovedEl,Item1} from '../Product/Productdata'
 import Customerdata from '../Customerreview/Customerdata'
+import Footer from'../component/footer'
 const index = () => {
     return (
         <div>
@@ -13,7 +14,8 @@ const index = () => {
             <Item data1={RemovedEl}/>
             <Product  data={Item1}/> 
             <Item2 data1={RemovedEl}/>  
-   <CustomerReview Customerdata={Customerdata}/>   
+             <CustomerReview Customerdata={Customerdata}/> 
+   {/**/ } <Footer/>  
         </div>
     )
 }
