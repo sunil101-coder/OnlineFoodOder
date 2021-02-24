@@ -31,8 +31,7 @@ const Header = () => {
                     <ul>
                     <li><NavLink to="/about">About Us</NavLink></li>
                     <li><NavLink to="">Contact</NavLink></li>
-                    <li><NavLink to="/order-online">Order Now</NavLink></li>
-
+                    
                     </ul>
              
                 </nav>
@@ -48,10 +47,13 @@ const Header = () => {
                     Order  anywhere anytime.
 
                      </Subtitle>
+                     <NavLink to="/order-online">
                      <Button className="titlebtn">
                         Our menu
                         </Button>                     
 
+                     </NavLink>
+                     
               
                 </div>
             </div>                       

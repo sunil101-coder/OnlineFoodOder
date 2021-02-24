@@ -15,7 +15,7 @@ const customMedia = generateMedia({
 const Recommended = () => {
     return (
         <Popularcontainer>
-        <Title>Recommended Food</Title>
+        <Title>Recommended Dishes</Title>
         <FoodWrapper>
             <Fooditem className="popularfooditem">
             {

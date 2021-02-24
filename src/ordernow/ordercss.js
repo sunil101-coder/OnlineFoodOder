@@ -59,11 +59,15 @@ border-bottom:1px solid #e8e8e8
 `;export const Content =styled.div`
 height:100%;
 
-`;export const Searchbar=styled.input`
-margin:5rem 0 0  1rem;
+`;
+export const Searchbar=styled.input`
+position:absolute;
+margin:17rem 0 0  1rem;
 width:92%;
 justify-content:center;
 border-radius:1rem;
+background:transparent;
+border:2px solid white;
 height:4rem;
 outline:none;
 `;
@@ -179,3 +183,8 @@ font-size:1rem;
 border:none;
 outline:none;
 `;
+export const Image=styled.img`
+margin:4rem 0 0 0;
+width:100%;
+height:340px;
+object-fit:cover    `;
