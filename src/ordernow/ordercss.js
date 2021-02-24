@@ -22,12 +22,27 @@ height:100%;
     color:black;
     margin:1rem 0 0 0;
     padding:6px;
-    transform: translate(15rem, 0px);
+    float:right;
+    transform:translate(-4rem,0);
+    ${customMedia.lessThan('smMobile')`
+    transform: translate(-2rem, 0px);
+   
+    `};
+
    
 }
 span{
     vertical-align:sub;
 
+}
+.Seemorebtn{
+   justify-content:center;
+    align-conte nt:center;
+    text-align:center;
+    margin-left:-6rem;
+    ${customMedia.lessThan('smMobile')`
+    
+    `};
 }
 .showdata::before{
     content:'See Less';
@@ -55,21 +70,34 @@ z-index:1;
 position:fixed;
 background:white;
 top:0;
-border-bottom:1px solid #e8e8e8
+border-bottom:1px solid #e8e8e8;
 `;export const Content =styled.div`
 height:100%;
 
 `;
+export const Searchbox=styled.div`
+
+width:100%;
+position:relative;
+display:flex;
+justify-content:center;
+align-content:center;
+text-align:center;
+    `;
 export const Searchbar=styled.input`
 position:absolute;
-margin:17rem 0 0  1rem;
-width:92%;
+margin:17rem 0 0  0rem;
+width:52%;
 justify-content:center;
 border-radius:1rem;
 background:transparent;
 border:2px solid white;
 height:4rem;
 outline:none;
+${customMedia.lessThan('smMobile')`
+width:92%;
+`}
+
 `;
 export const Foodlist=styled.div`
 margin:1rem 0 0 0rem;
@@ -82,11 +110,16 @@ display:grid;
 flex-wrap:wrap;
 justify-content:center;
 margin:0 5rem 0 5rem;
-grid-template-columns:repeat(4,1fr); 
+grid-template-columns:repeat${props=>(props.row1?"(6,1fr)":"(4,1fr)")}; 
+${customMedia.lessThan('mdDesktop')`
+grid-template-columns:repeat${props=>(props.row1?"(3,1fr)":"(4,1fr)")}; 
+margin:0 5rem 0 5rem;
+
+`};
 
 ${customMedia.lessThan('tablet')`
 margin:2rem 0rem 0 1.5rem; 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(3,1fr);
 `}
 ${customMedia.lessThan('smMobile')`
 margin:1rem 2rem 0 1.1rem; 
@@ -102,7 +135,7 @@ font-family:cursive;`;
 export  const Productcard=styled.div`
 margin:1rem 1rem 2rem 1rem;
 line-height:2;
-width:250px;
+width:${props=>(props.row1card?'180px':'250px')};
 .filtercardshow{
     display:block;
 }
@@ -112,6 +145,14 @@ width:250px;
 height:${props=>(props.productcard?'260px':null)};
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
+${customMedia.lessThan('mdDesktop')`
+width:${props=>(props.row1card?'250px':'250px')};
+
+`};
+${customMedia.lessThan('tablet')`
+width:${props=>(props.row1card?'215px':'250px')};
+
+`};
 ${customMedia.lessThan('smMobile')`
 width:150px;
 height:${props=>(props.productcard?'180px':'140px')};

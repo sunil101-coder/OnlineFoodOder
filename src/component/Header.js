@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { generateMedia } from "styled-media-query" 
 import Logo from '../images/Logo.jpg'
 import Button from '../component/Button'
-import {NavLink } from 'react-router-dom'
+import {NavLink ,Link} from 'react-router-dom'
 import Sidenavbar from '../component/Sidenavbar'
 const Header = () => {
     const [nav ,setnav]=useState(false);
@@ -47,12 +47,12 @@ const Header = () => {
                     Order  anywhere anytime.
 
                      </Subtitle>
-                     <NavLink to="/order-online">
+                     <Link to="/order-online">
                      <Button className="titlebtn">
                         Our menu
                         </Button>                     
 
-                     </NavLink>
+                     </Link>
                      
               
                 </div>
@@ -84,10 +84,15 @@ ${customMedia.lessThan('smMobile')`
         display:none;
 `}`
 const Headercontainer =styled.div`
+
+${customMedia.lessThan('mdDesktop')`
+height:70vw;`}
+
 ${customMedia.lessThan('tablet')`
-height:100vw;`}
+height:70vw;`}
 
     ${customMedia.lessThan('smMobile')`
+    width:102%;
     height:100vw;
     `}
 .header-top{
@@ -151,7 +156,7 @@ nav ul li{
     text-align:center;
     ${customMedia.lessThan('smMobile')`
     position:absolute;
-    margin:7rem 0 0 0;
+    margin:6rem 0 0 -1rem;
     ;
 `}
     

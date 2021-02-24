@@ -46,6 +46,16 @@ margin:0 auto;
   height:280px;
   border:1px solid lightblue;
   border-radius:20px 20px 16px 16px;
+  ${customMedia.lessThan('mdDesktop')`
+  width:36%;
+  height:24rem;
+  `};
+  ${customMedia.lessThan('tablet')`
+  width:40%;
+  line-height:1.5;
+  height:22rem;
+  `};
+  
   ${customMedia.lessThan('smMobile')`
   width:350px;
   height:300px;

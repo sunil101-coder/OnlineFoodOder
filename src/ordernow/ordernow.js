@@ -8,10 +8,10 @@ import Popularitem from './Popularitem'
 import Recommended from './Recommended'
 import '../css/Listitem.css'
 import Icontab from './Icontab'
-import Chicken from '../images/Orderonline.jpg'
+import Pizza from '../images/pizza.jpg'
 
 import {Ordercotainer,Topbar,Content,
-    Image,
+    Image,Searchbox,
     Searchbar,Foodlist,
     Title,Productcard,Productimg,
     ProductTitle,Foodcard,Button
@@ -36,20 +36,20 @@ const Ordernow = () => {
             </Topbar>
             <Content>
                 <div className="top-content">
-                <Searchbar type="text" placeholder="Cuisine"/>
-                
-                <Image src={Chicken}/> 
-                    
+                    <Searchbox>
+                    <Searchbar type="text" placeholder="Cuisine"/>
+                     <Image src={Pizza}/>
+                    </Searchbox>
                 </div>
                     <ListItem/>
                     <Foodlist>
                     <Title>Eat what makes you happy</Title>
-                    <Foodcard>
+                    <Foodcard row1>
                     {
                     RemovedEl.map((data, index) => {
                         return ( 
                    
-                        <Productcard class="card" >
+                        <Productcard row1card >
                                 <Productimg src={data.image} class="card-img-top" alt="..." />
 
                                 <div class="card-body">
@@ -61,12 +61,12 @@ const Ordernow = () => {
                     </Foodcard >
                     
                     {showfilter?
-                    <Foodcard >
+                    <Foodcard row1>
                     {
                     Filter.map((data, index) => {
                         return ( 
                             
-                        <Productcard  key={index}>
+                        <Productcard  key={index} row1card>
                                 <Productimg src={data.image} class="card-img-top" alt="..." />
 
                                 <div className="card-body">
@@ -83,7 +83,7 @@ const Ordernow = () => {
                     
    :null  }         
 
-                    <div>
+                    <div className="Seemorebtn">
 
                     <Button onClick={showfilterdata} className={showfilter?"showdata":"showhide"} ><span><IoIosArrowDown/></span></Button>
                     
