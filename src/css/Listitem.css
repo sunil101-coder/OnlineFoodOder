@@ -5,10 +5,23 @@
     margin: 1rem 0 0 0;
 }
 .Popular{
-    margin:-11rem 0 0 0; 
-    color:rgb(252, 247, 247);
+    margin:2rem 0 0 0; 
+    color:black;
 }
 .setPopular{
-    margin:-42rem 0 0 0; 
+    margin:2rem 0 0 0; 
     color:black;
+}
+.popularfooditem{
+    display:flex;
+    overflow-x:auto;
+    max-height:160px;
+    margin-top:1rem;
+
+}
+.popularfooditem::-webkit-scrollbar{
+    width:0;
+}
+.popularfoodcard{
+    min-width:110px;
 }

@@ -11,7 +11,7 @@ const customMedia = generateMedia({
 export const Ordercotainer=styled.div`
 background:white;
 width:100%;
-height:100vh;
+height:100%;
 .left-arrow{
     color:black;
     margin:1rem 0 0 1rem;
@@ -22,7 +22,7 @@ height:100vh;
     color:black;
     margin:1rem 0 0 0;
     padding:6px;
-    transform: translate(13rem, 0px);
+    transform: translate(15rem, 0px);
    
 }
 span{
@@ -57,7 +57,7 @@ background:white;
 top:0;
 border-bottom:1px solid #e8e8e8
 `;export const Content =styled.div`
-height:80rem;
+height:100%;
 
 `;export const Searchbar=styled.input`
 margin:5rem 0 0  1rem;
@@ -93,7 +93,8 @@ export const Title=styled.h1`
 font-size:1.5rem;
 font-weight:100;
 color:black;
-margin-left:1rem;`;
+margin-left:1rem;
+font-family:cursive;`;
 export  const Productcard=styled.div`
 margin:1rem 1rem 2rem 1rem;
 line-height:2;
