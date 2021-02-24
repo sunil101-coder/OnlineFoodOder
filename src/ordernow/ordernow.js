@@ -4,6 +4,9 @@ import {IoIosArrowDown} from 'react-icons/io/index'
 import {CgProfile} from 'react-icons/cg/index'
 import ListItem from './ListItem'
 import Popularitem from './Popularitem'
+import Recommended from './Recommended'
+
+
 import '../css/Listitem.css'
 
 import Icontab from './Icontab'
@@ -82,6 +85,7 @@ const Ordernow = () => {
                     </Foodlist>
                     <div className={showfilter?'Popular':'setPopular'}>
                         <Popularitem/>
+                        <Recommended/>
                     </div>
             </Content>
             <Icontab/>

@@ -12,14 +12,14 @@ const customMedia = generateMedia({
     smMobile: "600px"
   });
 
-const Popularitem = () => {
+const Recommended = () => {
     return (
         <Popularcontainer>
-        <Title>Popular Food</Title>
+        <Title>Recommended Food</Title>
         <FoodWrapper>
             <Fooditem className="popularfooditem">
             {
-                    RemovedEl.map((data, index) => {
+                    Filter.map((data, index) => {
                         return ( 
                    
                         <Productcard className="popularfoodcard" >
@@ -38,14 +38,15 @@ const Popularitem = () => {
     )
 }
 
-export default Popularitem
+export default Recommended
 const Popularcontainer=styled.div`
-height:5rem;
+margin:9rem 0 0 0;
+height:15rem;
 `;
  const Title=styled.h1`
 font-size:1.2rem;
 font-family:cursive;
-color:black;
+scolor:black;
 margin-left:1rem;`;
  const FoodWrapper =styled.div`
 height:15rem;

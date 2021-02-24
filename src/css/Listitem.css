@@ -21,6 +21,7 @@
 }
 .popularfooditem::-webkit-scrollbar{
     width:0;
+    height: 0;
 }
 .popularfoodcard{
     min-width:110px;
