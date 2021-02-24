@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import {BiLeftArrowAlt} from 'react-icons/bi/index'
 import {IoIosArrowDown} from 'react-icons/io/index'
-import {IoIosArrowUp} from 'react-icons/io/index'
+import {CgProfile} from 'react-icons/cg/index'
 import ListItem from './ListItem'
+import Popularitem from './Popularitem'
+import '../css/Listitem.css'
+
 import Icontab from './Icontab'
 import {Ordercotainer,Topbar,Content,
     Searchbar,Foodlist,
@@ -24,6 +27,7 @@ const Ordernow = () => {
         <Ordercotainer className="order-container">
             <Topbar className="top-bar">
                          <BiLeftArrowAlt size={40} className="left-arrow"/>
+                         <CgProfile size={40} className="profile"/>
             </Topbar>
             <Content>
                     <Searchbar type="text" placeholder="Cuisine"/>
@@ -76,6 +80,9 @@ const Ordernow = () => {
                         </div>                   
                     
                     </Foodlist>
+                    <div className={showfilter?'Popular':'setPopular'}>
+                        <Popularitem/>
+                    </div>
             </Content>
             <Icontab/>
                   </Ordercotainer>

@@ -15,7 +15,14 @@ height:100vh;
 .left-arrow{
     color:black;
     margin:1rem 0 0 1rem;
-    
+    padding:6px;
+   
+}
+.profile{
+    color:black;
+    margin:1rem 0 0 0;
+    padding:6px;
+    transform: translate(13rem, 0px);
    
 }
 span{
@@ -38,6 +45,7 @@ span{
 .showhide::after{
     content:'';
 } 
+
 `
 ;
 export const Topbar=styled.div`
@@ -49,13 +57,13 @@ background:white;
 top:0;
 border-bottom:1px solid #e8e8e8
 `;export const Content =styled.div`
-height:50rem;
+height:80rem;
 
 `;export const Searchbar=styled.input`
 margin:5rem 0 0  1rem;
 width:92%;
 justify-content:center;
-border-radius:2.4rem;
+border-radius:1rem;
 height:4rem;
 outline:none;
 `;
@@ -82,7 +90,7 @@ grid-template-columns:repeat(2,1fr);
 `}`;
 
 export const Title=styled.h1`
-font-size:1rem;
+font-size:1.5rem;
 font-weight:100;
 color:black;
 margin-left:1rem;`;
@@ -100,7 +108,7 @@ height:${props=>(props.productcard?'260px':null)};
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
 ${customMedia.lessThan('smMobile')`
-width:130px;
+width:150px;
 height:${props=>(props.productcard?'180px':'140px')};
 margin:0rem 0 1rem 1rem;
 .filtercardshow{
