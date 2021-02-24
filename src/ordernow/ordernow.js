@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {BiLeftArrowAlt} from 'react-icons/bi/index'
 import {IoIosArrowDown} from 'react-icons/io/index'
 import {IoIosArrowUp} from 'react-icons/io/index'
-
+import ListItem from './ListItem'
 import Icontab from './Icontab'
 import {Ordercotainer,Topbar,Content,
     Searchbar,Foodlist,
@@ -23,12 +23,11 @@ const Ordernow = () => {
     return (
         <Ordercotainer className="order-container">
             <Topbar className="top-bar">
-                
-                <BiLeftArrowAlt size={40} className="left-arrow"/>
+                         <BiLeftArrowAlt size={40} className="left-arrow"/>
             </Topbar>
             <Content>
                     <Searchbar type="text" placeholder="Cuisine"/>
-                    
+                    <ListItem/>
                     <Foodlist>
                     <Title>Eat what makes you happy</Title>
                     <Foodcard>
@@ -68,8 +67,7 @@ const Ordernow = () => {
                     </Foodcard>
                     
                     
-   :null 
-    }         
+   :null  }         
 
                     <div>
 

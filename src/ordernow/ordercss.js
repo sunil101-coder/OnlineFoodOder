@@ -11,13 +11,14 @@ const customMedia = generateMedia({
 export const Ordercotainer=styled.div`
 background:white;
 width:100%;
-height:100%;
+height:100vh;
 .left-arrow{
     color:black;
     margin:1rem 0 0 1rem;
     
    
-} span{
+}
+span{
     vertical-align:sub;
 
 }
@@ -36,7 +37,7 @@ height:100%;
 }
 .showhide::after{
     content:'';
-}
+} 
 `
 ;
 export const Topbar=styled.div`
@@ -51,7 +52,7 @@ border-bottom:1px solid #e8e8e8
 height:50rem;
 
 `;export const Searchbar=styled.input`
-margin:6rem 0 0  1rem;
+margin:5rem 0 0  1rem;
 width:92%;
 justify-content:center;
 border-radius:2.4rem;
@@ -77,7 +78,7 @@ grid-template-columns:repeat(2,1fr);
 `}
 ${customMedia.lessThan('smMobile')`
 margin:1rem 2rem 0 1.1rem; 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 `}`;
 
 export const Title=styled.h1`
@@ -99,7 +100,7 @@ height:${props=>(props.productcard?'260px':null)};
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
 ${customMedia.lessThan('smMobile')`
-width:100px;
+width:130px;
 height:${props=>(props.productcard?'180px':'140px')};
 margin:0rem 0 1rem 1rem;
 .filtercardshow{

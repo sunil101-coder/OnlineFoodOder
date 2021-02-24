@@ -1,0 +1,68 @@
+import React ,{useState}from 'react'
+import styled from 'styled-components'
+import '../css/Listitem.css'
+import Frenchfries from '../Icon/Frenchfries.png'
+import Pizza from '../Icon/Pizza.png'
+import Fastfood from '../Icon/Fastfood.png'
+import Icecream from '../Icon/Icecream.png'
+
+const ListItem = () => {
+    const [nav ,setnav]=useState(false);
+    const fixednavbar=()=>{
+        console.log(window.scrollY);
+        if(window.scrollY>100)
+        {
+            setnav(true);
+        }
+        else{
+            setnav(false);
+
+        }
+    }
+    window.addEventListener('scroll',fixednavbar);
+
+    return (
+        <IconList className={nav?'icon-top-active':null}>
+            <div className="icon">
+                <Icon src={Frenchfries} alt='...'/>
+            </div>
+            <div className="icon">
+                <Icon src={Pizza} alt='...'/>
+            </div>
+            <div className="icon">
+                <Icon src={Fastfood} alt='...'/>
+            </div>
+            <div className="icon">
+                <Icon src={Icecream} alt='...'/>
+            </div><div className="icon">
+                <Icon src={Frenchfries} alt='...'/>
+            </div>
+
+        </IconList>
+    )
+}
+
+export default ListItem
+const IconList=styled.div`
+height: 4rem;
+width: 100%;
+background: white;
+display:flex;
+flex-direction:row;
+margin: 1rem 0 1rem 1rem;
+bottom:0;
+top:3rem;
+color:black;
+.icon{
+    justify-content:center;
+    text-align:center;
+    align-content:center;
+    margin:0.5rem 0 0 0;
+    width:25%;
+
+}
+`;
+const Icon=styled.img`
+width:51px;
+padding:5px 5px 5px 8px;
+box-shadow:5px 5px 5px 5px rgba(239,235,235);`;
