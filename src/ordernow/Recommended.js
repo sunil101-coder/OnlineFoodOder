@@ -40,19 +40,34 @@ const Recommended = () => {
 
 export default Recommended
 const Popularcontainer=styled.div`
-margin:9rem 0 0 0;
+
+margin:15rem 0 0 0;
 height:15rem;
+${customMedia.lessThan('smMobile')`
+margin:9rem 0 0 0;
+`};
+
 `;
  const Title=styled.h1`
 font-size:1.2rem;
 font-family:cursive;
 scolor:black;
+
 margin-left:1rem;`;
  const FoodWrapper =styled.div`
+height:22rem;
+background:white;
+
+${customMedia.lessThan('smMobile')`
 height:15rem;
+`}
 
 `;
 const Fooditem=styled.div`
+${customMedia.lessThan('tablet')`
+    max-height:278px;
+   
+`}
 `;
 
  const Productcard=styled.div`
@@ -63,8 +78,17 @@ width:250px;
 height:${props=>(props.productcard?'260px':null)};
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
+${customMedia.lessThan('mdDesktop')`
+margin:1rem 0rem 2rem 2rem;   
+min-width:217px;
+height:244px;
+`};
+${customMedia.lessThan('tablet')`
+margin:1rem 0rem 2rem 2rem;   
+min-width:217px;
+`}
 ${customMedia.lessThan('smMobile')`
-width:150px;
+min-width:156px;
 height:${props=>(props.productcard?'180px':'140px')};
 margin:0rem 0 1rem 1rem;
 

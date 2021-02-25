@@ -52,19 +52,32 @@ height:15rem;
 
 `;
 const Fooditem=styled.div`
+${customMedia.lessThan('tablet')`
+    max-height:278px;
+   
+`}
 `;
 
  const Productcard=styled.div`
 margin:1rem 1rem 2rem 1rem;
 line-height:2;
 width:250px;
-
-height:${props=>(props.productcard?'260px':null)};
+max-height:260px;
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
+${customMedia.lessThan('mdDesktop')`
+margin:0rem 0rem 2rem 2rem;   
+min-width:217px;
+height:244px;
+`};
+${customMedia.lessThan('tablet')`
+margin:0rem 0rem 2rem 2rem;   
+min-width:217px;
+height:244px;
+`}
 ${customMedia.lessThan('smMobile')`
-width:150px;
-height:${props=>(props.productcard?'180px':'140px')};
+min-width:156px;
+height:140px;
 margin:0rem 0 1rem 1rem;
 
 `
