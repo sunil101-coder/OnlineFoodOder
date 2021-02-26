@@ -8,10 +8,10 @@ const Querycard = ({search}) => {
     return (
       
         <Querycontainer>
-             <Queryimg src={search.recipe.image} class="card-img-top" alt="..." />
+             <Queryimg src={search.recipe.image} className="card-img-top" alt="..." />
 
-<div class="card-body">
-<QueryTitle class="card-title" item-title>{search.recipe.label}</QueryTitle>
+<div className="card-body">
+<QueryTitle className="card-title" >{search.recipe.label}</QueryTitle>
 </div>
        
 

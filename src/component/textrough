@@ -36,3 +36,67 @@
 1: {recordType: "Recipe", record_type: "Recipe", record_spec: "recipe-22858", has_photo: "1",…}
 2: {recordType: "Recipe", record_type: "Recipe", record_spec: "recipe-540223", has_photo: "0",…}
 totalResultsCount: "3"  
+
+
+
+{
+isloading?
+<div>
+{
+        search.map((search, index) => {
+            return (
+                <Foodquery  className={Maintaincontainer}
+                    key={index}
+                    Title={search.recipe.label}
+                    Image={search.recipe.image}
+
+                />
+            )
+
+        })
+    }
+
+</div>:
+    <Displaycard />
+
+    
+   
+
+}
+
+const Querycard=styled.div`
+margin:1rem 1rem 2rem 1rem;
+line-height:2;
+width:${props=>(props.row1card?'180px':'250px')};
+.filtercardshow{
+    display:block;
+}
+.filtercardhide{
+    display:none;
+}
+height:${props=>(props.productcard?'260px':null)};
+border:1px solid lightblue;
+border-radius:20px 20px 16px 16px;
+${customMedia.lessThan('mdDesktop')`
+width:${props=>(props.row1card?'250px':'250px')};
+
+`};
+${customMedia.lessThan('tablet')`
+width:${props=>(props.row1card?'215px':'250px')};
+
+`};
+${customMedia.lessThan('smMobile')`
+width:150px;
+height:${props=>(props.productcard?'180px':'140px')};
+margin:0rem 0 1rem 1rem;
+.filtercardshow{
+    display:block;
+}
+.filtercardhide{
+    display:none;
+}
+
+`
+}
+
+`;
