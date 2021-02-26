@@ -51,7 +51,8 @@ margin:17.2rem 0 0  20rem;
 `};
 
 ${customMedia.lessThan('smMobile')`
-margin:17.2rem 0 0  14rem;
+margin:17.2rem 0 0  2rem;
+left:0;
 
 `}
 

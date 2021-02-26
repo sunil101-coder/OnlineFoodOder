@@ -42,7 +42,7 @@ background:white;
 display:grid;
 flex-wrap:wrap;
 justify-content:center;
-margin:0 5rem 0 5rem;
+margin:0 5rem 0 4rem;
 grid-template-columns:repeat(4,1fr); 
 ${customMedia.lessThan('mdDesktop')`
 grid-template-columns:repeat(3,1fr); 
