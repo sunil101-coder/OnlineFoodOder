@@ -10,8 +10,7 @@ import '../css/Listitem.css'
 import Icontab from './Icontab'
 import Pizza from '../images/pizza.jpg'
 import Displaycard from './Displaycard'
-import Foodquery from './Foodquery'
-import {Maincontainer} from './Foodquery'
+import Foodquery  from './Foodquery'
 
 import {
     Ordercotainer,
@@ -19,7 +18,7 @@ import {
     Content,
     Image,
     Searchbox,
-    Searchbar,
+    Searchbar, Foodcard
 } from './ordercss'
 
 const Ordernow = () => {
@@ -36,7 +35,7 @@ const Ordernow = () => {
             const result = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${Api_id}&app_key=${Api_key}`);
             console.log(result.data.hits);
             setsearch(result.data.hits);
-
+            
         }
         fetchapi()
     }, [query]);
@@ -52,6 +51,9 @@ const Ordernow = () => {
         setfoodsearch('');
         setisloading(true);
         
+        
+
+                
 
     }
 
@@ -77,32 +79,7 @@ const Ordernow = () => {
                 </div>
                 <ListItem /> 
 
-{
-isloading?
-<div>
-{
-        search.map((search, index) => {
-            return (
-                <Foodquery  className={Maincontainer}
-                    key={index}
-                    Title={search.recipe.label}
-                    Image={search.recipe.image}
-
-                />
-            )
-
-        })
-    }
-
-</div>:
-    <Displaycard />
-
-    
-   
-
-}
-               
-   
+                <Foodquery  isloading={isloading} search= {search} />
             </Content>
 
 

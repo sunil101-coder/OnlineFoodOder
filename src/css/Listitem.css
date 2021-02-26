@@ -25,3 +25,15 @@
 .popularfoodcard{
     min-width:110px;
 }
+/* Foodquery*/
+.Querycontainer{
+margin:1rem 0 0 0rem;
+width:100%;
+height:100%;
+background:white;
+display:grid;
+flex-wrap:wrap;
+justify-content:center;
+margin:0 5rem 0 5rem;
+grid-template-columns:repeat(6,1fr);
+}
