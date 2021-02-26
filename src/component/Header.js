@@ -8,7 +8,6 @@ import Sidenavbar from '../component/Sidenavbar'
 const Header = () => {
     const [nav ,setnav]=useState(false);
     const fixednavbar=()=>{
-        console.log(window.scrollY);
         if(window.scrollY)
         {
             setnav(true);

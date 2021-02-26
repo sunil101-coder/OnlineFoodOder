@@ -1,105 +1,116 @@
-import React, { useState } from 'react'
-import {NavLink} from 'react-router-dom'
-import {BiLeftArrowAlt} from 'react-icons/bi/index'
-import {IoIosArrowDown} from 'react-icons/io/index'
-import {CgProfile} from 'react-icons/cg/index'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { NavLink } from 'react-router-dom'
+import { BiLeftArrowAlt } from 'react-icons/bi/index'
+import { CgSearch } from 'react-icons/cg/index'
+
+import { CgProfile } from 'react-icons/cg/index'
 import ListItem from './ListItem'
-import Popularitem from './Popularitem'
-import Recommended from './Recommended'
 import '../css/Listitem.css'
 import Icontab from './Icontab'
 import Pizza from '../images/pizza.jpg'
+import Displaycard from './Displaycard'
+import Foodquery from './Foodquery'
+import {Maincontainer} from './Foodquery'
 
-import {Ordercotainer,Topbar,Content,
-    Image,Searchbox,
-    Searchbar,Foodlist,
-    Title,Productcard,Productimg,
-    ProductTitle,Foodcard,Button
-
+import {
+    Ordercotainer,
+    Topbar,
+    Content,
+    Image,
+    Searchbox,
+    Searchbar,
 } from './ordercss'
-import {RemovedEl,Filter} from './orderdata'
 
 const Ordernow = () => {
-    
-    const [showfilter, setshowfilter] = useState(false);
-    const showfilterdata=()=>{
-        setshowfilter({ setshowfilter: !showfilter });
-        if (showfilter) {
-            setshowfilter(false)
+
+    const Api_id = "d49ed10d";
+    const Api_key = "5582391e69fc64dc773671f9625c9b7f";
+    const [search, setsearch] = useState([]);
+    const [foodsearch, setfoodsearch] = useState('');
+    const [query,setquery]=useState('');
+    const [isloading,setisloading] =useState(false);
+    useEffect(() => {
+        const fetchapi = async () => {
+
+            const result = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${Api_id}&app_key=${Api_key}`);
+            console.log(result.data.hits);
+            setsearch(result.data.hits);
+
         }
-          }
+        fetchapi()
+    }, [query]);
+
+    const onchange = (q) => {
+        setfoodsearch(q)
+        console.log(search)
+
+    };
+    const handlequery=(e)=>{
+        e.preventDefault();
+        setquery(foodsearch);
+        setfoodsearch('');
+        setisloading(true);
+        
+
+    }
+
     return (
         <Ordercotainer className="order-container">
             <Topbar className="top-bar">
-                         <NavLink to="/"><BiLeftArrowAlt size={40} className="left-arrow"/></NavLink>
-                         <CgProfile size={40} className="profile"/>
+                <NavLink to="/"><BiLeftArrowAlt size={40} className="left-arrow" /></NavLink>
+                <CgProfile size={40} className="profile" />
             </Topbar>
             <Content>
                 <div className="top-content">
-                    <Searchbox>
-                    <Searchbar type="text" placeholder="Cuisine"/>
-                     <Image src={Pizza}/>
+                <form onSubmit={handlequery}>
+                         
+                    <Searchbox>''
+                        <Searchbar type="text" value={foodsearch} placeholder="" onChange={(e) => onchange(e.target.value)} />
+                        <button className="searchicon">
+                            <CgSearch  size={35}/>
+                        </button>   
+                      <Image src={Pizza} />
                     </Searchbox>
+                    </form>
+                       
                 </div>
-                    <ListItem/>
-                    <Foodlist>
-                    <Title>Eat what makes you happy</Title>
-                    <Foodcard row1>
-                    {
-                    RemovedEl.map((data, index) => {
-                        return ( 
-                   
-                        <Productcard row1card >
-                                <Productimg src={data.image} class="card-img-top" alt="..." />
+                <ListItem /> 
 
-                                <div class="card-body">
-                        <ProductTitle class="card-title" item-title>{data.Title}</ProductTitle>
-                                </div>
-                            </Productcard>
-                        )}
-                    )}
-                    </Foodcard >
-                    
-                    {showfilter?
-                    <Foodcard row1>
-                    {
-                    Filter.map((data, index) => {
-                        return ( 
-                            
-                        <Productcard  key={index} row1card>
-                                <Productimg src={data.image} class="card-img-top" alt="..." />
+{
+isloading?
+<div>
+{
+        search.map((search, index) => {
+            return (
+                <Foodquery  className={Maincontainer}
+                    key={index}
+                    Title={search.recipe.label}
+                    Image={search.recipe.image}
 
-                                <div className="card-body">
-                                <ProductTitle className="card-title" item-title>{data.Title}</ProductTitle>
-                                </div>
-                            </Productcard>
-                            
-                        )}
-                    )}   
-                  
-       
-                    </Foodcard>
-                    
-                    
-   :null  }         
+                />
+            )
 
-                    <div className="Seemorebtn">
+        })
+    }
 
-                    <Button onClick={showfilterdata} className={showfilter?"showdata":"showhide"} ><span><IoIosArrowDown/></span></Button>
-                    
-                        </div>                   
-                    
-                    </Foodlist>
-                    <div className={showfilter?'Popular':'setPopular'}>
-                        <Popularitem/>
-                        <Recommended/>
-                    </div>
+</div>:
+    <Displaycard />
+
+    
+   
+
+}
+               
+   
             </Content>
-            <Icontab/>
-                  </Ordercotainer>
-                  
 
-       
+
+            <Icontab />
+        </Ordercotainer>
+
+
+
     )
 }
 

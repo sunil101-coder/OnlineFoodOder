@@ -30,4 +30,9 @@
             </div>
 
      //headercontent/
-     
+     title: "Indian Kadai Chicken"
+     recipe_photo_url: "https://img.sndimg.com/food/image/upload/v1/img/recipes/72/32/1/U8IQihNUT3CWBhchQUoc_Indian-ka
+     0: {recordType: "Recipe", record_type: "Recipe", record_spec: "recipe-72321", has_photo: "1",…}
+1: {recordType: "Recipe", record_type: "Recipe", record_spec: "recipe-22858", has_photo: "1",…}
+2: {recordType: "Recipe", record_type: "Recipe", record_spec: "recipe-540223", has_photo: "0",…}
+totalResultsCount: "3"  

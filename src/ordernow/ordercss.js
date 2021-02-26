@@ -31,6 +31,32 @@ height:100%;
 
    
 }
+.searchicon{
+    position:absolute;
+margin:17.2rem 0 0  40rem;
+width:8%;
+justify-content:center;
+border-radius:1rem;
+background:transparent;
+height:4rem;
+border:none;
+outline:none;
+${customMedia.lessThan('mdDesktop')`
+margin:17.2rem 0 0  28rem;
+
+`};
+${customMedia.lessThan('tablet')`
+margin:17.2rem 0 0  20rem;
+
+`};
+
+${customMedia.lessThan('smMobile')`
+margin:17.2rem 0 0  14rem;
+
+`}
+
+
+}
 span{
     vertical-align:sub;
 
@@ -86,16 +112,24 @@ text-align:center;
     `;
 export const Searchbar=styled.input`
 position:absolute;
+font-size:3rem;
+
 margin:17rem 0 0  0rem;
 width:52%;
 justify-content:center;
+text-align:center;
+align-content:center;
 border-radius:1rem;
 background:transparent;
 border:2px solid white;
 height:4rem;
 outline:none;
+&placehoder{
+    color:black;
+}
 ${customMedia.lessThan('smMobile')`
 width:92%;
+font-size:3rem;
 `}
 
 `;
