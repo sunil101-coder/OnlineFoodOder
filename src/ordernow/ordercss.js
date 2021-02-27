@@ -33,13 +33,16 @@ height:100%;
 }
 .searchicon{
     position:absolute;
-margin:17.2rem 0 0  40rem;
+margin:17rem 0 0  35.5rem;
 width:8%;
 justify-content:center;
-border-radius:1rem;
+border-radius:0rem 1rem 1rem 0rem     ;
 background:transparent;
 height:4rem;
-border:none;
+border:2px solid white;
+
+border-left:0px;
+border-right:2px solid white;
 outline:none;
 ${customMedia.lessThan('mdDesktop')`
 margin:17.2rem 0 0  28rem;
@@ -116,13 +119,15 @@ position:absolute;
 font-size:3rem;
 
 margin:17rem 0 0  0rem;
-width:52%;
+width:36%;
 justify-content:center;
 text-align:center;
 align-content:center;
-border-radius:1rem;
+border-radius:1rem 0rem 1rem 1rem;
 background:transparent;
-border:2px solid white;
+
+border:2px  solid white;
+border-right:0px;
 height:4rem;
 outline:none;
 &placehoder{
