@@ -37,3 +37,18 @@ justify-content:center;
 margin:0 5rem 0 5rem;
 grid-template-columns:repeat(6,1fr);
 }
+.Cart{
+    display:none;
+    text-align: center;
+    color:black;
+    opacity: 0.2;
+
+
+}
+.card-img:hover+.Cart{
+    display:block;
+    color:black;
+    margin:-8rem 0 0 0;
+    font-size: 2rem;
+    opacity: 0.5;
+}

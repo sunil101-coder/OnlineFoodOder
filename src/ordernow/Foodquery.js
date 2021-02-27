@@ -60,6 +60,7 @@ margin:2rem 0rem 0 1.5rem;
 grid-template-columns:repeat(3,1fr);
 `}
 ${customMedia.lessThan('smMobile')`
+height:100%;
 margin:1rem 2rem 0 1.1rem; 
 grid-template-columns:repeat(2,1fr);
 `}`;
