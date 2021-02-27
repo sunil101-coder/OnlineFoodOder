@@ -45,17 +45,18 @@ border-left:0px;
 border-right:2px solid white;
 outline:none;
 ${customMedia.lessThan('mdDesktop')`
-margin:17.2rem 0 0  28rem;
+margin:17rem 0 0  28rem;
 
 `};
 ${customMedia.lessThan('tablet')`
-margin:17.2rem 0 0  20rem;
+margin:17rem 0 0  20rem;
 
 `};
 
 ${customMedia.lessThan('smMobile')`
-margin:17.2rem 0 0  2rem;
-left:0;
+margin:17rem 0 0  2rem;
+right:1rem;
+width:4rem;
 
 `}
 
@@ -123,7 +124,7 @@ width:36%;
 justify-content:center;
 text-align:center;
 align-content:center;
-border-radius:1rem 0rem 1rem 1rem;
+border-radius:1rem 0rem 0rem 1rem;
 background:transparent;
 
 border:2px  solid white;
@@ -134,8 +135,9 @@ outline:none;
     color:black;
 }
 ${customMedia.lessThan('smMobile')`
-width:92%;
+width:67%;
 font-size:3rem;
+margin-left:-1rem
 `}
 
 `;
