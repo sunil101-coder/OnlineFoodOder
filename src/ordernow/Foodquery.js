@@ -10,10 +10,10 @@ const Foodquery = ({isloading,search}) => {
     return isloading ?(
         
         <Maincontainer>
-        { search.map((search) => 
+        { search.map((search,index) => 
            (
         
-        <Querycard   search={search} />
+        <Querycard   search={search} id={index}/>
                     
     
     )
@@ -37,12 +37,12 @@ const customMedia = generateMedia({
   
 export const Maincontainer=styled.div`
 width:95%;
-height:75rem;
+height:88vw;
 background:white;
 display:grid;
 flex-wrap:wrap;
 justify-content:center;
-margin:0 5rem 0 4rem;
+margin:0 5rem  1rem 4rem;
 grid-template-columns:repeat(4,1fr); 
 ${customMedia.lessThan('mdDesktop')`
 grid-template-columns:repeat(3,1fr); 

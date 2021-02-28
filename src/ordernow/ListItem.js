@@ -10,7 +10,6 @@ import Friedchicken from '../Icon/Friedchicken.png'
 const ListItem = () => {
     const [nav ,setnav]=useState(false);
     const fixednavbar=()=>{
-        console.log(window.scrollY);
         if(window.scrollY>300)
         {
             setnav(true);
