@@ -46,10 +46,13 @@ const customMedia = generateMedia({
   });
 
 const Navbar=styled.div`
-${customMedia.lessThan('lgdesktop')`
+${customMedia.greaterThan('lgdesktop')`
 display:none;
     `}
-    ${customMedia.lessThan('smMobile')`
+    ${customMedia.lessThan('lgdesktop')`
+    display:none;
+        `}
+        ${customMedia.lessThan('smMobile')`
     display:block;
     background-color: transparent;
         `}
