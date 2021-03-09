@@ -5,8 +5,12 @@ import Logo from '../images/Logo.jpg'
 import Button from '../component/Button'
 import {NavLink ,Link} from 'react-router-dom'
 import Sidenavbar from '../component/Sidenavbar'
+import  Login from '../page/About'
 const Header = () => {
     const [nav ,setnav]=useState(false);
+    const [loginbtn, setloginbtn] = useState(false)
+    {/*const Placeapi="https://maps.googleapis.com/maps/api/place/textsearch/output?parameters";
+    console.log(Placeapi);
     const fixednavbar=()=>{
         if(window.scrollY)
         {
@@ -16,9 +20,18 @@ const Header = () => {
             setnav(false);
 
         }
-    }
-    window.addEventListener('scroll',fixednavbar);
+    }*/}
+    const Loginbtn =()=>{
+        setloginbtn({setloginbtn:!loginbtn});
+        if(loginbtn)
+        {
+            setloginbtn(false);
+        }
+        
+        };
+    {/*window.addEventListener('scroll',fixednavbar);*/}
 
+    
 
     
     return (
@@ -28,14 +41,13 @@ const Header = () => {
                 <Sidenavbar/>
                  <nav>
                     <ul>
-                    <li><NavLink to="/about">About Us</NavLink></li>
-                    <li><NavLink to="">Contact</NavLink></li>
+                    <li><NavLink to=""><button className="top-barbtn"  onClick={Loginbtn}>Login</button></NavLink></li>
+                    <li><NavLink to=""><button className="top-barbtn">Signup</button></NavLink></li>
                     
                     </ul>
              
                 </nav>
-
-
+        
                 </div> 
                 <div className="header-content">
                 <div className="header-box">
@@ -57,7 +69,10 @@ const Header = () => {
                 </div>
             </div>                       
             
-                   
+            {loginbtn?<Login/>:null
+
+}
+
                 
           </Headercontainer>
         
@@ -85,14 +100,14 @@ ${customMedia.lessThan('smMobile')`
 const Headercontainer =styled.div`
 
 ${customMedia.lessThan('mdDesktop')`
-height:70vw;`}
+height:45vw;`}
 
 ${customMedia.lessThan('tablet')`
-height:70vw;`}
+height:40vw;`}
 
     ${customMedia.lessThan('smMobile')`
     width:102%;
-    height:100vw;
+    height:85vw;
     `}
 .header-top{
     
@@ -133,30 +148,50 @@ nav ul li{
     font-size:1em;
     font-weight:100;
     width:4rem;
-    &:hover{
-        color:lightblue;
-        
-    }
+    
     ${customMedia.lessThan('smMobile')`
     display:none;
 
 `}
 
 }
+.top-barbtn{
+    height: 3rem;
+    width: 7rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:white;
+
+    &:hover{
+        color:lightblue;
+        cursor:pointer;
+        border:1px solid black;
+    }
+}
 
 .header-content{
 
     width:100%;
     position:relative;
-    margin:4.5rem 0 0;
+    margin:0.5rem 0 0 0;
     display:flex;
     justify-content:center;
     align-content:center;
     text-align:center;
+    ${customMedia.lessThan('mdDesktop')`
+    margin:5.5rem 0 0 0;
+    
+    `}
+    ${customMedia.lessThan('mdDesktop')`
+    margin:4.5rem 0 0 0;
+    
+    `}
     ${customMedia.lessThan('smMobile')`
     position:absolute;
     margin:6rem 0 0 -1rem;
-    ;
+    
 `}
     
 }
@@ -164,9 +199,8 @@ nav ul li{
     height:10rem;
     text-align:left;
     justify-content:center;
-    aloign-content:center;
-    margin:10rem 0 0 0;
-}
+    align-content:center;
+    }
 .titlebtn
 {
     border:none;
@@ -185,7 +219,6 @@ const Title = styled.h1`
     left:0;
     color:red;
     text-align:left;
-    margin:1rem 0 0;
     font-weight:700;
     font-size:3rem;;
     line-height:2.1rem;

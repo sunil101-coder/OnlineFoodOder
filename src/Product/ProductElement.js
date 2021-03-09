@@ -28,7 +28,7 @@ export  const ProductWrapper=styled.div`
 display:grid;
 flex-wrap:wrap;
 justify-content:center;
-margin:0 5rem 0 5rem;
+margin:0 14rem 0 14rem;
 grid-template-columns:repeat(4,1fr); 
 ${customMedia.lessThan('tablet')`
 margin:2rem 0rem 0 0.5rem; 
@@ -67,10 +67,10 @@ font-family:math;
 `; 
 
 export  const Productcard=styled.div`
-margin:1rem 1rem 2rem 1rem;
+margin:1rem 0rem 2rem 1rem;
 line-height:2;
-width:18rem;
-height:16.2rem;
+width:16rem;
+height:16rem;
 border:1px solid lightblue;
 border-radius:20px 20px 16px 16px;
 ${customMedia.lessThan('mdDesktop')`
