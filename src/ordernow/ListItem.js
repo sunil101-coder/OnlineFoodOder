@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 import '../css/Listitem.css'
 import Frenchfries from '../Icon/Frenchfries.png'
 import Pizza from '../Icon/Pizza.png'
@@ -24,18 +25,34 @@ const ListItem = () => {
     return (
         <IconList className={nav?'icon-top-active':null}>
             <div className="icon">
+                <NavLink to="">
                 <Icon src={Frenchfries} alt='...'/>
+                </NavLink>
+                
             </div>
             <div className="icon">
-                <Icon src={Pizza} alt='...'/>
+            <NavLink to="">
+            <Icon src={Pizza} alt='...'/>    
+                    </NavLink>
+                
             </div>
             <div className="icon">
-                <Icon src={Fastfood} alt='...'/>
+            <NavLink to="">
+            <Icon src={Fastfood} alt='...'/>    
+                    </NavLink>
+                
             </div>
             <div className="icon">
-                <Icon src={Icecream} alt='...'/>
-            </div><div className="icon">
-                <Icon src={Friedchicken} alt='...'/>
+            <NavLink to="">
+            <Icon src={Icecream} alt='...'/>     
+                    </NavLink>
+               
+            </div>
+            <div className="icon">
+            <NavLink to="">
+            <Icon src={Friedchicken} alt='...'/>    
+                    </NavLink>
+                
             </div>
 
         </IconList>
