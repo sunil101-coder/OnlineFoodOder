@@ -27,12 +27,12 @@ export default Icontab
 
 const Iconbar=styled.div`
 position: fixed;
-height: 4rem;
+height: 6rem;
 width: 100%;
 background: white;
 display:flex;
 flex-direction:row;
-margin: -15rem 0 0 0;
+margin: 0 0 0 -1px;
 border-top:1px solid #e8e8e8;
 bottom:0;
 color:black;
@@ -40,9 +40,12 @@ color:black;
     justify-content:center;
     text-align:center;
     align-content:center;
+
     margin:0.5rem 0 0 0;
     width:50%;
 
 }
-
+.icon :hover{
+    border-bottom:1px solid grey;
+}
 `;

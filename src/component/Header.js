@@ -5,7 +5,10 @@ import Logo from '../images/Logo.jpg'
 import Button from '../component/Button'
 import {NavLink ,Link} from 'react-router-dom'
 import Sidenavbar from '../component/Sidenavbar'
-import  Login from '../page/About'
+import  Modal from 'react-modal'
+import  Box from '../userlocation/locationsearchbar'
+import SignupButton from '../component/Signupbtn'
+
 const Header = () => {
     const [nav ,setnav]=useState(false);
     const [loginbtn, setloginbtn] = useState(false)
@@ -32,12 +35,12 @@ const Header = () => {
     {/*window.addEventListener('scroll',fixednavbar);*/}
 
     
-
+    Modal.setAppElement('body')
     
     return (
         <Headercontainer className="header-container">
                  <div className={nav?'header-top active':'header-top'}>
-                <Sitelogo src={Logo}/>
+                {/*<Sitelogo src={Logo}/>*/}
                 <Sidenavbar/>
                  <nav>
                     <ul>
@@ -51,7 +54,8 @@ const Header = () => {
                 </div> 
                 <div className="header-content">
                 <div className="header-box">
-                <Title>
+                <Box/>
+                {/*<Title>
                     Always Choose Good
                 </Title>
                 <Subtitle>
@@ -65,13 +69,27 @@ const Header = () => {
 
                      </Link>
                      
-              
+                */}
                 </div>
             </div>                       
             
-            {loginbtn?<Login/>:null
-
-}
+            <Modal isOpen={loginbtn} 
+             onRequestClose={Loginbtn}
+            style={customStyles}
+            >
+            <SignupButton onClick={Loginbtn} close>X</SignupButton>
+            <SignupButton google>
+              Signup with google
+          </SignupButton>
+          <SignupButton>
+              Signup with mobile no
+          </SignupButton>
+          
+            <div></div>
+          <form>
+          </form>
+               
+                </Modal>
 
                 
           </Headercontainer>
@@ -80,6 +98,19 @@ const Header = () => {
 }
 
 export default Header
+const customStyles = {
+    content : {
+      top                   : '50%',
+      left                  : '50%',
+      right                 : 'auto',
+      bottom                : 'auto',
+      marginRight           : '-50%',
+      transform             : 'translate(-50%, -50%)',
+      color                 : 'black',
+      width                 : '30rem'
+
+    }
+  };
 const customMedia = generateMedia({
     lgdesktop:'1440px',
     mdDesktop:'1150px',
@@ -98,7 +129,9 @@ ${customMedia.lessThan('smMobile')`
         display:none;
 `}`
 const Headercontainer =styled.div`
-
+${customMedia.greaterThan('lgdesktop')`
+height:26vw;
+`}
 ${customMedia.lessThan('mdDesktop')`
 height:45vw;`}
 
@@ -200,6 +233,15 @@ nav ul li{
     text-align:left;
     justify-content:center;
     align-content:center;
+    transform:translate(0,114px);
+    ${customMedia.lessThan('mdDesktop')`
+    margin:-7.5rem 0 0 0;
+    
+    `}
+    ${customMedia.lessThan('smMobile')`
+    margin:-6.5rem 0 0 0rem;
+    
+    `}
     }
 .titlebtn
 {
