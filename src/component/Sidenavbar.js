@@ -25,7 +25,7 @@ const Sidenavbar = () => {
                 
                 <NavLink to="/">Login</NavLink>
                 <NavLink to="/">Signup</NavLink>
-                git                            
+                                   
             </nav>
 
                 :null

@@ -12,6 +12,7 @@ const Locationsearch=()=>{
         
 
 }
+const Clientsecret="_hXpP-1PbdieHnod5ZQn5eFq"
 let menuref=useRef()
 useEffect(() => {
   document.addEventListener("mousedown",(event)=>{
@@ -107,8 +108,5 @@ const customMedia = generateMedia({
   color:black;
   height:2rem;
   margin:-1.8rem 0 0 0;
-  text-align:right; 
-  
-  
-
+  text-align:right;
   `;

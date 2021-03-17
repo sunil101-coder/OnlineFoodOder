@@ -8,7 +8,12 @@ import Sidenavbar from '../component/Sidenavbar'
 import  Modal from 'react-modal'
 import  Box from '../userlocation/locationsearchbar'
 import SignupButton from '../component/Signupbtn'
+import { GoogleLogin } from 'react-google-login';
 
+
+const responseGoogle = (response) => {
+  console.log(response);
+}
 const Header = () => {
     const [nav ,setnav]=useState(false);
     const [loginbtn, setloginbtn] = useState(false)
@@ -78,9 +83,15 @@ const Header = () => {
             style={customStyles}
             >
             <SignupButton onClick={Loginbtn} close>X</SignupButton>
-            <SignupButton google>
-              Signup with google
-          </SignupButton>
+            <GoogleLogin
+            clientId="676724069050-aoag59u2qh6m7rmrr29nghpskjhnlvo2.apps.googleusercontent.com"
+            buttonText="Signup With Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            isSignedIn={true}
+            cookiePolicy={'single_host_origin'}
+            />
+          
           <SignupButton>
               Signup with mobile no
           </SignupButton>
