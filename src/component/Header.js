@@ -91,7 +91,7 @@ const Header = () => {
             isSignedIn={true}
             cookiePolicy={'single_host_origin'}
             >
-          
+              </GoogleLogin>
               {/*<SignupButton>
               Signup with mobile no
           </SignupButton>*/}
