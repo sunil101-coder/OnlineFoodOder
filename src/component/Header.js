@@ -92,9 +92,9 @@ const Header = () => {
             cookiePolicy={'single_host_origin'}
             >
           
-          <SignupButton>
+              {/*<SignupButton>
               Signup with mobile no
-          </SignupButton>
+          </SignupButton>*/}
           
             <div></div>
           <form>
