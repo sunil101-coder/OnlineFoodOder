@@ -90,7 +90,7 @@ const Header = () => {
             onFailure={responseGoogle}
             isSignedIn={true}
             cookiePolicy={'single_host_origin'}
-            >
+            >signup
               </GoogleLogin>
               {/*<SignupButton>
               Signup with mobile no
