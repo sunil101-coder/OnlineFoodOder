@@ -88,6 +88,7 @@ const Header = () => {
             buttonText="Signup With Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
+            onClick={responseGoogle}
             isSignedIn={true}
             cookiePolicy={'single_host_origin'}
             >signup
