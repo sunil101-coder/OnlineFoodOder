@@ -84,7 +84,7 @@ const Header = () => {
             >
             <SignupButton onClick={Loginbtn} close>X</SignupButton>
             <GoogleLogin
-            clientId="676724069050-aoag59u2qh6m7rmrr29nghpskjhnlvo2.apps.googleusercontent.com"
+            clientId="935489782323-heb9g91mk2cuh39ipjg297gvu528sf2f.apps.googleusercontent.com"
             buttonText="Signup With Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
