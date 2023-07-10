@@ -50,7 +50,7 @@ const Header = () => {
                  <nav>
                     <ul>
                     <li><NavLink to=""><button className="top-barbtn"  onClick={Loginbtn}>Login</button></NavLink></li>
-                    <li><NavLink to=""><button className="top-barbtn">Signup</button></NavLink></li>
+                    <li><NavLink to=""><button className="top-barbtn" onClick={Loginbtn}>Signup</button></NavLink></li>
                     
                     </ul>
              
